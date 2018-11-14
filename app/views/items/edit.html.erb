@@ -3,4 +3,5 @@
 <%= render 'form', item: @item %>
 
 <%= link_to 'Show', @item %> |
-<%= link_to 'Back', :back, class: "btn btn-default" %>
+<%= link_to 'Back', :back, class: "btn btn-default" %><br>
+<%= link_to 'Destroy', @item, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-danger" %>
