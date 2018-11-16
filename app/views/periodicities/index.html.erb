@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Periodicities</h1>
+
+<p><%= link_to 'New Periodicity', new_periodicity_path, class: "btn btn-secondary" %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @periodicities.each do |periodicity| %>
+      <tr>
+        <td><%= periodicity.name %></td>
+        <td><%= link_to 'Show', periodicity %></td>
+        <td><%= link_to 'Edit', edit_periodicity_path(periodicity) %></td>
+        <td><%= link_to 'Destroy', periodicity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
