@@ -3,6 +3,7 @@ require 'test_helper'
 class ItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @item = items(:one)
+    @periodicity = periodicities(:one)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create item" do
     assert_difference('Item.count') do
-      post items_url, params: { item: { amount: @item.amount, name: @item.name } }
+      post items_url, params: { item: { amount: @item.amount, name: @item.name, periodicity_id: @periodicity.id } }
     end
 
     assert_redirected_to item_url(Item.last)
@@ -34,7 +35,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update item" do
-    patch item_url(@item), params: { item: { amount: @item.amount, name: @item.name } }
+	  patch item_url(@item), params: { item: { amount: @item.amount, name: @item.name, periodicity_id: @periodicity.id } }
     assert_redirected_to item_url(@item)
   end
 

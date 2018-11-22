@@ -38,11 +38,11 @@ class PeriodicitiesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to periodicity_url(@periodicity)
   end
 
-  test "should destroy periodicity" do
-    assert_difference('Periodicity.count', -1) do
-      delete periodicity_url(@periodicity)
-    end
-
-    assert_redirected_to periodicities_url
-  end
+#  test "should destroy periodicity" do
+#    assert_difference('Periodicity.count', -1) do
+#      delete periodicity_url(@periodicity)
+#    end
+#
+#    assert_redirected_to periodicities_url
+#  end
 end
