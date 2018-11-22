@@ -3,7 +3,7 @@
 <%= render 'form', item: @item %>
 
 <p>
-  <%= link_to 'Show', @item, class: "btn btn-light" %>
-  <%= link_to 'Back', :back, class: "btn btn-light" %><br>
+  <%= link_to 'Show', @item, class: "btn btn-secondary" %>
+  <%= link_to 'Back', :back, class: "btn btn-secondary" %><br>
 </p>
 <p><%= link_to 'Destroy', @item, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
