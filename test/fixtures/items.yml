@@ -8,3 +8,4 @@ one:
 two:
   name: MyString
   amount: 9.99
+  periodicity: two
