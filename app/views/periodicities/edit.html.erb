@@ -1,6 +1,9 @@
 <h1>Editing Periodicity</h1>
 
-<%= render 'form', periodicity: @periodicity %>
+<pP<%= render 'form', periodicity: @periodicity %></p>
 
-<%= link_to 'Show', @periodicity %> |
-<%= link_to 'Back', periodicities_path %>
+<%= link_to 'Back', :back, class: 'btn btn-secondary' %>
+<%= link_to 'Show', @periodicity, class: 'btn btn-secondary' %>
+<%= link_to 'List', periodicities_path, class: 'btn btn-secondary' %>
+<%= link_to 'Destroy', @periodicity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+
