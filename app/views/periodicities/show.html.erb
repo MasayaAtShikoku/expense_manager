@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @periodicity.name %> Payment</h1>
+
 <p>
-  <strong>Name:</strong>
-  <%= @periodicity.name %>
+  <%= link_to 'Edit', edit_periodicity_path(@periodicity), class: 'btn btn-secondary' %>
+  <%= link_to 'List', periodicities_path, class: 'btn btn-secondary' %>
 </p>
 
-<%= link_to 'Edit', edit_periodicity_path(@periodicity), class: 'btn btn-secondary' %>
-<%= link_to 'List', periodicities_path, class: 'btn btn-secondary' %>
+<p><%= render partial: 'items/index', locals:  {items: @periodicity.items} %></p>
