@@ -19,7 +19,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @item.category.name if @item.category %>
+  <%= link_to @item.category.name, @item.category if @item.category %>
 </p>
 
 <%= link_to 'List', items_path, class: "btn btn-secondary" %>
