@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    params[:periodicity_id] ? @item = Periodicity.find(params[:periodicity_id]).items.build : @item = Item.new
   end
 
   # GET /items/1/edit

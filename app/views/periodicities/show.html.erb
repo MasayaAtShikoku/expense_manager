@@ -7,4 +7,8 @@
   <%= link_to 'List', periodicities_path, class: 'btn btn-secondary' %>
 </p>
 
+<p>
+  <%= link_to 'New Item', new_periodicity_item_path(@periodicity), class: 'btn btn-primary' %>
+</p>
+
 <p><%= render partial: 'items/index', locals:  {items: @periodicity.items} %></p>

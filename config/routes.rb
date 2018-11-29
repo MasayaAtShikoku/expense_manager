@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :periodicities
+  resources :periodicities do
+    resources :items
+  end
+
   root to: "items#index"
   resources :items
 
