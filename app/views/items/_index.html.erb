@@ -5,6 +5,7 @@
       <th>Name</th>
       <th>Amount</th>
       <th>Periodicity</th>
+      <th>Category</th>
     </tr>
   </thead>
 
@@ -14,7 +15,8 @@
         <td><%= link_to item.description, item %></td>  
         <td><%= item.name %></td>
         <td><%= number_to_currency(item.amount, locale: :jp) %></td>
-        <td><%= link_to item.periodicity.name, periodicity_path(item.periodicity) %></td>
+	<td><%= link_to item.periodicity.name, periodicity_path(item.periodicity) %></td>
+	<td><%= link_to item.category.name, category_path(item.category) if item.category %></td>
       </tr>
     <% end %>
   </tbody>
