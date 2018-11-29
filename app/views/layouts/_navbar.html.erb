@@ -16,8 +16,10 @@
 	<%= (content_tag :span, "(current)", class: "sr-only") if current_page?(periodicities_path) %>
       <% end %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item<%= ' active' if current_page?(categories_path) %>">
+      <%= link_to categories_path, class: "nav-link" do %>Categories
+	<%= (content_tag :span, "(current)", class: "sr-only") if current_page?(categories_path) %>
+      <% end %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

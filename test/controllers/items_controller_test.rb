@@ -4,6 +4,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @item = items(:one)
     @periodicity = periodicities(:one)
+    @category = categories(:one)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create item" do
     assert_difference('Item.count') do
-      post items_url, params: { item: { amount: @item.amount, name: @item.name, periodicity_id: @periodicity.id } }
+      post items_url, params: { item: { amount: @item.amount, name: @item.name, periodicity_id: @periodicity.id, category_id: @category.id } }
     end
 
     assert_redirected_to item_url(Item.last)
@@ -35,7 +36,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update item" do
-	  patch item_url(@item), params: { item: { amount: @item.amount, name: @item.name, periodicity_id: @periodicity.id } }
+    patch item_url(@item), params: { item: { amount: @item.amount, name: @item.name, periodicity_id: @periodicity.id, category_id: @category.id } }
     assert_redirected_to item_url(@item)
   end
 

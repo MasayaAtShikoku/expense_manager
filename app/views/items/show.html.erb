@@ -11,9 +11,15 @@
   <strong>Amount:</strong>
   <%= number_to_currency(@item.amount, locale: :jp) %>
 </p>
+
 <p>
   <strong>Periodicity:</strong>
   <%= @item.periodicity.name if @item.periodicity %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @item.category.name if @item.category %>
 </p>
 
 <%= link_to 'List', items_path, class: "btn btn-secondary" %>
