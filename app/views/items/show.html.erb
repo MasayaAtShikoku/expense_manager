@@ -14,7 +14,7 @@
 
 <p>
   <strong>Periodicity:</strong>
-  <%= @item.periodicity.name if @item.periodicity %>
+  <%= link_to @item.periodicity.name, @item.periodicity if @item.periodicity %>
 </p>
 
 <p>
