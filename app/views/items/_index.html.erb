@@ -1,6 +1,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Description</th>
       <th>Name</th>
       <th>Amount</th>
       <th>Periodicity</th>
@@ -10,7 +11,8 @@
   <tbody>
     <% items.each do |item| %>
       <tr>
-        <td><%= link_to item.name, item %></td>
+        <td><%= link_to item.description, item %></td>  
+        <td><%= item.name %></td>
         <td><%= number_to_currency(item.amount, locale: :jp) %></td>
         <td><%= link_to item.periodicity.name, periodicity_path(item.periodicity) %></td>
       </tr>
