@@ -2,13 +2,9 @@
 
 <h1><%= @periodicity.name %> Payment</h1>
 
-<p>
-  <%= link_to 'Edit', edit_periodicity_path(@periodicity), class: 'btn btn-secondary' %>
-  <%= link_to 'Back', :back, class: 'btn btn-secondary' %>
-</p>
+<%= link_to 'Edit', edit_periodicity_path(@periodicity), class: 'btn btn-secondary' %>
+<%= link_to 'Back', :back, class: 'btn btn-secondary' %>
 
-<p>
-  <%= link_to 'New Item', new_periodicity_item_path(@periodicity), class: 'btn btn-primary' %>
-</p>
+<%= link_to 'New Item', new_periodicity_item_path(@periodicity), class: 'btn btn-primary' %>
 
 <p><%= render partial: 'items/index', locals:  {items: @periodicity.items} %></p>

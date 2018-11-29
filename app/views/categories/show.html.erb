@@ -7,6 +7,9 @@
 <%= link_to 'Edit', edit_category_path(@category), class: 'btn btn-secondary' %> 
 <%= link_to 'Back', :back, class: 'btn btn-secondary' %>
 
+<%= link_to 'New Item', new_category_item_path(@category), class: 'btn btn-primary' %>
+
+
 <p>
   <%= render partial: 'items/index', locals: { items: @category.items } %>
 </p>

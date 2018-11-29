@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     params[:periodicity_id] ? @item = Periodicity.find(params[:periodicity_id]).items.build : @item = Item.new
+    params[:category_id] ? @item = Category.find(params[:category_id]).items.build : @item = Item.new
   end
 
   # GET /items/1/edit

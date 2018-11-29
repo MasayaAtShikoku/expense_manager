@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :categories
+  resources :categories do
+    resources :items
+  end
+
   resources :periodicities do
     resources :items
   end
