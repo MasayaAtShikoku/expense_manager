@@ -8,13 +8,17 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th class="text-md-right">Monthly Total Amount</th>
+      <th class="text-md-right">Annual Total Amount</th>
     </tr>
   </thead>
 
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= link_to category.name, category %></td>
+	<td><%= link_to category.name, category %></td>
+        <td class="text-md-right"><%= number_to_currency category.monthly_total_amount, locale: :jp %></td>
+	<td class="text-md-right"><%= number_to_currency category.annual_total_amount, locale: :jp %></td>
       </tr>
     <% end %>
   </tbody>
