@@ -11,5 +11,5 @@
 
 
 <p>
-  <%= render partial: 'items/index', locals: { items: @category.items } %>
+  <%= render partial: 'items/index', locals: { items: @category.items.order(:description) } %>
 </p>
