@@ -2,6 +2,16 @@
 
 <h1>Categories</h1>
 
+<p>
+  <strong>Grand Monthly Total Amount:</strong>
+  <%= number_to_currency Item.grand_monthly_total_amount, locale: :jp %>
+</p>
+
+<p>
+  <strong>Grand Annual Total Amount:</strong>
+  <%= number_to_currency Item.grand_annual_total_amount, locale: :jp %>
+</p>
+
 <p><%= link_to 'New Category', new_category_path, class: 'btn btn-primary' %></p>
 
 <table class="table">
