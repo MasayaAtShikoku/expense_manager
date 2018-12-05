@@ -19,6 +19,7 @@
 
 <%= link_to 'New Item', new_category_item_path(@category), class: 'btn btn-primary' %>
 
+<%= link_to 'List of Categories', categories_path, class: 'btn btn-secondary' %>
 
 <p>
   <%= render partial: 'items/index', locals: { items: @category.items.order(:description) } %>
