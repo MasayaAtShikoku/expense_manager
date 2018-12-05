@@ -25,6 +25,12 @@
       <% end %>
       </li>
 
+      <li class="nav-item<%= ' active' if current_page?(vendors_path) %>">
+      <%= link_to vendors_path, class: "nav-link" do %>Vendors
+	<%= (content_tag :span, "(current)", class: "sr-only") if current_page?(vendors_path) %>
+      <% end %>
+      </li>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
